@@ -1,0 +1,20 @@
+{
+  "author": "Dio Brando <lordzero0000@gmail.com> (http://twitter.com/lordzero0000)",
+  "name": "webhook-listener-api",
+  "description": "This api will listen to the webhook send by gogs.",
+  "version": "0.0.1",
+  "homepage": "http://zappinpi.ddns.net:5000",
+  "repository": {
+    "type": "git",
+    "url": "http://zappinpi.ddns.net:3000/lordzero0000/cd-api"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "express": "*"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
