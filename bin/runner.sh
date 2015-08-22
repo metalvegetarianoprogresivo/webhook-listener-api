@@ -2,8 +2,9 @@
 
 REPO=$1
 URL=$2
-NAME=$3
 
-git clone $REPO.git
-docker build -t $NAME $REPO
-docker run -p 80:80 -d $NAME
+cd /opt/cd-stuff/
+git clone $URL.git
+cd /opt/cd-stuff/$REPO
+docker build -t $REPO .
+docker run -p 80:80 -d $REPO

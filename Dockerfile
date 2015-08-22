@@ -9,7 +9,7 @@ WORKDIR /src
 # install the dependencies from the package.json file
 RUN npm install
 
-# make port 80 available outside of the image
+# make port 5000 available outside of the image
 EXPOSE 5000
 
 # start node with the index.js file of our hello-world application
