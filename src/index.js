@@ -10,10 +10,10 @@ app.get('/', function (req, res) {
 });
 
 app.post('/', function (req, res) {
-  child = exec("bash ~/runner.sh", function (error, stdout, stderr) {
+  child = exec("bash /opt/git-stuff/runner.sh", function (error, stdout, stderr) {
     sys.print('stdout: ' + stdout);
     sys.print('stderr :' + stderr);
-    if (errpr !== null) {
+    if (error !== null) {
       console.log('exec error: ' + error);
     }
   });
