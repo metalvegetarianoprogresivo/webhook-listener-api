@@ -11,10 +11,12 @@ This api will listen to the webhook send by gogs.
 We need to set the webhook of our repository on GOGS. All you need to do is add the payload URL where this app is running and set the content type as application/json. And with this you'll be able to deploy any application on docker.
 
 ## Next steps
+ - - You'll need to create a new repository on gogs. And add the webhook to the port 5000 of your RPI using application/json as content type. You can also add the Slack webhook.
  - The application does not stop nor remove the container currently running. You'll have to stop and delete that container if you want to update.
  - The API does not check if the port is currently in use, so you'll need to set the port that you want to use. The host will use the same port as the container.
  - You'll need to create a Dockerfile in your repository in order to be deployed. You can see the Dockerfile included with this repository.
- - The runner.sh script needs to be set on the file that tne index.js file says. You can change this if you want.
+ - The runner.sh script needs to be set on the file that the index.js file says. You can change this if you want.
+ - You'll need to set the Slack webhook on runner.sh to notify your Slack team that the application has been deployed.
 
 ## Dockerfile Example
 ```
