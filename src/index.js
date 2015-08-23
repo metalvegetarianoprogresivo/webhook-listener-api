@@ -12,7 +12,7 @@ app.get('/', function (req, res) {
 });
 
 app.post('/', function (req, res) {
-  var cmd = "bash /opt/git-stuff/runner.sh " + req.body.repository.repo + " " + req.body.repository.url
+  var cmd = "bash /opt/cd-stuff/runner.sh " + req.body.repository.name + " " + req.body.repository.url
   child = exec(cmd, function (error, stdout, stderr) {
     sys.print('stdout: ' + stdout);
     sys.print('stderr :' + stderr);

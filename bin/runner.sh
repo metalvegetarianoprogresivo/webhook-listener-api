@@ -4,7 +4,13 @@ REPO=$1
 URL=$2
 
 cd /opt/cd-stuff/
+if [ -d $REPO ]; then
+  chmod 777 -R $REPO
+  rm -r $REPO
+fi
 git clone $URL.git
-cd /opt/cd-stuff/$REPO
-docker build -t $REPO .
-docker run -p 80:80 -d $REPO
+if [ -d $REPO ]; then
+  cd /opt/cd-stuff/$REPO
+  docker build -t $REPO .
+  docker run -p 80:80 -d $REPO
+fi
